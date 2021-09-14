@@ -9,12 +9,13 @@ window.addEventListener('DOMContentLoaded', () => {
       hours = now.getHours(),
       minutes = now.getMinutes(),
       seconds = now.getSeconds();
-  
   if (seconds < 10) {
     seconds = `0${seconds}`;
+  } else if (minutes < 10) {
+    minutes = `0${minutes}`;
   }
-  
-      hoursElem.textContent = hours;
+
+  hoursElem.textContent = hours;
   minutesElem.textContent = minutes;
   secondsElem.textContent = seconds;
 
@@ -23,12 +24,13 @@ window.addEventListener('DOMContentLoaded', () => {
     hours = now.getHours();
     minutes = now.getMinutes();
     seconds = now.getSeconds();
-    
+
     if (seconds < 10) {
-    seconds = `0${seconds}`;
+      seconds = `0${seconds}`;
     } else if (minutes < 10) {
       minutes = `0${minutes}`;
     }
+    
     hoursElem.textContent = `${hours}`;
     minutesElem.textContent = `${minutes}`;
     secondsElem.textContent = `${seconds}`;
