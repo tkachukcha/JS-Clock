@@ -1,4 +1,7 @@
 /* Reset styles */
+@import url(d:\Sites\JS\Clock\node_modules\tailwindcss\base.css);
+@import url(d:\Sites\JS\Clock\node_modules\tailwindcss\components.css);
+@import url(d:\Sites\JS\Clock\node_modules\tailwindcss\utilities.css);
 html {
   line-height: 1.15;
   /* 1 */
@@ -214,7 +217,7 @@ template {
 }
 
 html {
-  font-size: 10px;
+  font-size: 15px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 

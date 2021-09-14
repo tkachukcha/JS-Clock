@@ -1,0 +1,22 @@
+{
+  "name": "clock",
+  "version": "1.0.0",
+  "description": "javascript clock project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkachukcha/JS-Clock.git"
+  },
+  "author": "Dan Tkachuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tkachukcha/JS-Clock/issues"
+  },
+  "homepage": "https://github.com/tkachukcha/JS-Clock#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.15"
+  }
+}
