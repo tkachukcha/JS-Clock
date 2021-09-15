@@ -5,37 +5,33 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock, Scissors, Paper, Lizard, Spock</title>
+  <title>JS Clock</title>
   <link rel="stylesheet" href="/assets/style/style.css">
-  <link rel="stylesheet" href="/assets/style/tailwind.css">
 </head>
 
-<body class="mt-10 bg-blue-100 flex justify-center">
-  
-    <div class="container w-1/2 my-20 flex justify-center">
-      <div class="container flex justify-center items-center flex-col bg-white py-10 rounded-2xl shadow-md">
-        <div id="hours" class="flex justify-center items-center mb-5 text-5xl"></div>
-        <div class="flex justify-center items-center text-3xl">Hours</div>
-      </div>
-      <div class="container flex justify-center items-center flex-col">
-        <div class="mx-3 my-4 flex justify-center items-center text-5xl">:</div>
-      </div>
-      <div class="container flex justify-center items-center flex-col bg-white py-10 rounded-2xl shadow-md">
-        <div id="minutes" class="flex justify-center items-center mb-5 text-5xl"></div>
-        <div class="flex justify-center items-center text-3xl">Minutes</div>
-      </div>
-      <div class="container flex justify-center items-center flex-col">
-        <div class="mx-3 my-4 flex justify-center items-center text-5xl">:</div>
-      </div>
-      <div class="container flex justify-center items-center flex-col bg-white py-10 rounded-2xl shadow-md">
-        <div id="seconds" class="flex justify-center items-center mb-5 text-5xl"></div>
-        <div class="flex justify-center items-center text-3xl">Seconds</div>
-      </div>
+<body>
+  <div class="container">
+    <div class="card">
+      <div id="hours" class="numbers"></div>
+      <div class="words">Hours</div>
     </div>
+    <div class="colon">:</div>
+    <div class="card">
+      <div id="minutes" class="numbers"></div>
+      <div class="words">Minutes</div>
+    </div>
+    <div class="colon">:</div>
+    <div class="card">
+      <div id="seconds" class="numbers"></div>
+      <div class="words">Seconds</div>
+    </div>
+  </div>
+  <button id="dark">Dark</button> 
+  
 
 
 
- 
+
 
 
   <script src="app.js"></script>

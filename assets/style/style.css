@@ -1,7 +1,4 @@
 /* Reset styles */
-@import url(d:\Sites\JS\Clock\node_modules\tailwindcss\base.css);
-@import url(d:\Sites\JS\Clock\node_modules\tailwindcss\components.css);
-@import url(d:\Sites\JS\Clock\node_modules\tailwindcss\utilities.css);
 html {
   line-height: 1.15;
   /* 1 */
@@ -226,5 +223,129 @@ html {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+body.dark {
+  background-color: #202020;
+}
+
+.container {
+  width: 50%;
+  min-width: 320px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightblue;
+  border-radius: 20px;
+  padding: 20px;
+  border: 2px solid #02005e;
+}
+
+.container.dark {
+  background-color: #303030;
+  border: 2px solid #3d3d3d;
+  color: #bbbbbb;
+}
+
+.card {
+  color: #000;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  -ms-flex-preferred-size: 70px;
+      flex-basis: 70px;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card.dark {
+  -webkit-box-shadow: 0 2px 3px 1px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 2px 3px 1px rgba(255, 255, 255, 0.1);
+  background-color: #222222;
+  color: #bbbbbb;
+}
+
+.numbers {
+  font-size: 2rem;
+}
+
+#dark {
+  color: black;
+  border: 1px solid #333333;
+  background-color: silver;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+#dark::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 72px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 3px -2px rgba(0, 0, 0, 0.5) inset;
+          box-shadow: 0px 0px 3px -2px rgba(0, 0, 0, 0.5) inset;
+}
+
+#dark::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: silver;
+  -webkit-transition: left 1s;
+  transition: left 1s;
+}
+
+#dark.dark {
+  color: #bbbbbb;
+  border: 1px solid #bbbbbb;
+  background-color: #333333;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 50%;
+  }
+  .card {
+    -ms-flex-preferred-size: 120px;
+        flex-basis: 120px;
+  }
+  .numbers {
+    font-size: 3rem;
+  }
+  .colon {
+    font-size: 2rem;
+  }
+  .words {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
