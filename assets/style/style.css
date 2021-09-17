@@ -381,9 +381,16 @@ span.dark {
   transition: all 0.3s;
 }
 
+.ampm {
+  font-size: 1rem;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     width: 500px;
+  }
+  .ampm {
+    font-size: 1.5rem;
   }
   .card {
     -ms-flex-preferred-size: 120px;
