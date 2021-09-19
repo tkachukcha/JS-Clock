@@ -10,10 +10,24 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="options-wrapper">
+    <div class="option">
+      <button id="dark" class="switch"></button>
+      <span class="option-name">Light Mode</span>
+    </div>
+    <div class="option">
+      <button id="pm" class="switch"></button>
+      <span class="option-name">24H Mode</span>
+    </div>
+    <div class="option">
+      <button id="clockType" class="switch"></button>
+      <span class="option-name">Digital</span>
+    </div>
+  </div>
+  <div class="clock-body">
     <div class="card">
-      <div id="hours" class="numbers"></div>
-      <div class="words">Hours</div>
+      <div id="hours" class="numbers"></div><span class="ampm hide"></span>
+      <div class="words hours">Hours</div>
     </div>
     <div class="colon">:</div>
     <div class="card">
@@ -26,16 +40,7 @@
       <div class="words">Seconds</div>
     </div>
   </div>
-  <div class="options-wrapper">
-    <div class="options">
-      <button id="dark" class="switch"></button>
-      <span>Light Mode</span>
-    </div>
-    <div class="options">
-      <button id="pm" class="switch"></button>
-      <span>24H Mode</span>
-    </div>
-  </div>
+  
 
 
 
