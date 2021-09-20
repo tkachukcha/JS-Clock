@@ -235,60 +235,6 @@ body {
   transition: all 0.3s;
 }
 
-.clock-body {
-  width: 320px;
-  min-width: 320px;
-  margin: 20px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: silver;
-  border-radius: 20px;
-  padding: 10px;
-  border: 2px solid #010035;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.card {
-  color: #000;
-  padding: 20px 10px;
-  margin: 10px;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 10px;
-  -ms-flex-preferred-size: 90px;
-      flex-basis: 90px;
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.numbers {
-  font-size: 1.6rem;
-  display: inline-block;
-}
-
-.ampm {
-  color: #000;
-  font-size: 0.8rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.words {
-  margin-top: 5px;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-}
-
 .options-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -367,13 +313,93 @@ body {
   transition: all 0.3s;
 }
 
+#digitalClock {
+  width: 320px;
+  min-width: 320px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: silver;
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid #010035;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#digitalClock.hide {
+  display: none;
+}
+
+.card {
+  color: #000;
+  padding: 20px 10px;
+  margin: 10px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  -ms-flex-preferred-size: 90px;
+      flex-basis: 90px;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.numbers {
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.ampm {
+  color: #000;
+  font-size: 0.8rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.words {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+#analogClock {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 20px auto;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+}
+
+.fraction {
+  width: 1px;
+  height: 150px;
+  position: absolute;
+  top: 149px;
+  left: 149px;
+  background-color: #aaa;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: rotate(0deg) translateY(130px) scaleY(0.1);
+          transform: rotate(0deg) translateY(130px) scaleY(0.1);
+}
+
 body.dark {
   background-color: #202020;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.clock-body.dark {
+#digitalClock.dark {
   background-color: #303030;
   border: 2px solid #3d3d3d;
   color: #bbbbbb;
@@ -419,7 +445,7 @@ body.dark {
 }
 
 @media screen and (min-width: 768px) {
-  .clock-body {
+  #digitalClock {
     width: 500px;
   }
   .card {
