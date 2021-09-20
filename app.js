@@ -3,9 +3,11 @@
 window.addEventListener('DOMContentLoaded', () => {
 
   class Fraction {
-    constructor(angle, translate, scale, name, element) {
+    constructor(width, angle, scaleX, translateY, scale, name, element) {
+      this.width = width;
       this.angle = angle;
-      this.translate = translate;
+      this.scaleX = scaleX;
+      this.translateY = translateY;
       this.scale = scale;
       this.name = name;
       this.element = element;
@@ -14,17 +16,14 @@ window.addEventListener('DOMContentLoaded', () => {
       const fractionDiv = document.createElement('div');
       fractionDiv.classList.add('fraction');
       analogClock.append(fractionDiv);
-      fractionDiv.style.transform = `rotate(${this.angle}deg) translateY(${this.translate}px) scaleY(${this.scale})`;
+      fractionDiv.style.width = `${this.width}px`;
+      fractionDiv.style.transform = `rotate(${this.angle}deg) scaleX(${this.scaleX}) translateY(${this.translateY}px) scaleY(${this.scale})`;
       if (this.name !== null) {
         fractionDiv.id = this.name;
         this.element = document.querySelector(`#${this.name}`);
       }
     }
-
   }
-
-
-
 
   const
     hoursElem = document.querySelector('#hours'),
@@ -49,21 +48,30 @@ window.addEventListener('DOMContentLoaded', () => {
     minutes,
     seconds,
     milliseconds,
-    fractions = [];
+    fractions = [],
+    hoursMarks = [];
 
-  const secondsArrow = new Fraction(0, 0, 0.85, 'secondsArrow');
+  const secondsArrow = new Fraction(1, 0, 1, 0, 0.85, 'secondsArrow');
+  const minutesArrow = new Fraction(1, 0, 2, 0, 0.7, 'minutesArrow');
+  const hoursArrow = new Fraction(1, 0, 2, 0, 0.4, 'hoursArrow');
   secondsArrow.render();
+  minutesArrow.render();
+  hoursArrow.render();
 
   renderFractions();
 
   function renderFractions() {
     for (let i = 0; i < 120; i += 1) {
       if (i % 2 === 0) {
-        fractions.push(new Fraction(i * 3, 137, 0.08));
+        fractions.push(new Fraction(1, i * 3, 1, 137, 0.08));
       } else {
-        fractions.push(new Fraction(i * 3, 143, 0.04));
+        fractions.push(new Fraction(1, i * 3, 1, 143, 0.04));
       }
       fractions[i].render();
+    }
+    for (let i = 0; i < 12; i += 1) {
+      hoursMarks.push(new Fraction(1, i * 30, 2, 134, 0.10));
+      hoursMarks[i].render();
     }
   }
 
@@ -81,7 +89,9 @@ window.addEventListener('DOMContentLoaded', () => {
     hoursElem.innerHTML = hours;
     minutesElem.textContent = minutes;
     secondsElem.textContent = seconds;
-    secondsArrow.element.style.transform = `rotate(${(seconds*6)+180}deg) translateY(${secondsArrow.translate}px) scaleY(${secondsArrow.scale})`;
+    secondsArrow.element.style.transform = `rotate(${(seconds*6)+180}deg) translateY(${secondsArrow.translateY}px) scaleY(${secondsArrow.scale})`;
+    minutesArrow.element.style.transform = `rotate(${(minutes*6)+180}deg) translateY(${minutesArrow.translateY}px) scaleY(${minutesArrow.scale}) scaleX(${minutesArrow.scaleX})`;
+    hoursArrow.element.style.transform = `rotate(${(hours*30)+180}deg) translateY(${hoursArrow.translateY}px) scaleY(${hoursArrow.scale}) scaleX(${hoursArrow.scaleX})`;
   }
 
   function getTime() {

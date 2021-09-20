@@ -385,12 +385,26 @@ body {
   height: 150px;
   position: absolute;
   top: 149px;
-  left: 149px;
+  left: 148.5px;
   background-color: #aaa;
   -webkit-transform-origin: top;
           transform-origin: top;
   -webkit-transform: rotate(0deg) translateY(130px) scaleY(0.1);
           transform: rotate(0deg) translateY(130px) scaleY(0.1);
+}
+
+.analog-number {
+  position: absolute;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  color: #777;
+}
+
+#number12 {
+  left: 140px;
+  top: 15px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 body.dark {
