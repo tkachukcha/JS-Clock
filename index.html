@@ -5,7 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#333" />
   <title>JS Clock</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Tourney:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style/style.css">
 </head>
 
@@ -15,44 +19,45 @@
       <button id="dark" class="switch"></button>
       <span class="option-name">Light Mode</span>
     </div>
+
     <div class="option">
       <button id="clockType" class="switch"></button>
       <span class="option-name">Digital</span>
     </div>
+
   </div>
 
-  <div id="digitalClock">
-    <div class="card">
-      <div id="hours" class="numbers"></div><span class="ampm hide"></span>
-      <div class="words hours">Hours</div>
+  <div class="clock-container">
+
+    <div id="digitalClock">
+      <div class="wrapper">
+        <div class="numbers-container">
+          <div id="hours" class="numbers"></div>
+          <div class="colon">:</div>
+          <div id="minutes" class="numbers"></div>
+          <div class="colon">:</div>
+          <div id="seconds" class="numbers"></div>
+        </div>
+        <div class="ampm hide"></div>
+        <div class="words-container">
+          <div class="words hours">HRS</div>
+          <div class="words">MIN</div>
+          <div class="words">SEC</div>
+        </div>
+      </div>
     </div>
-    <div class="colon">:</div>
-    <div class="card">
-      <div id="minutes" class="numbers"></div>
-      <div class="words">Minutes</div>
+    <div id="analogClock" class="hide">
+      <div id="number12" class="analog-number">12</div>
     </div>
-    <div class="colon">:</div>
-    <div class="card">
-      <div id="seconds" class="numbers"></div>
-      <div class="words">Seconds</div>
-    </div>
+
   </div>
 
-  <div id="analogClock" class="hide">
-    <div id="number12" class="analog-number">12</div>
+  <div class="options-wrapper">
+    <div class="option">
+      <button id="pm" class="switch"></button>
+      <span class="option-name">24H Mode</span>
+    </div>
   </div>
-
-  <div class="options-wrapper"><div class="option">
-    <button id="pm" class="switch"></button>
-    <span class="option-name">24H Mode</span>
-  </div></div>
-  
-
-
-
-
-
-
 
   <script src="app.js"></script>
 </body>

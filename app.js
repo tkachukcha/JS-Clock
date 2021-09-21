@@ -30,6 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     minutesElem = document.querySelector('#minutes'),
     secondsElem = document.querySelector('#seconds'),
     amPmElem = document.querySelector('.ampm'),
+    digitalWrapper = document.querySelector('.wrapper'),
 
     themeBtn = document.querySelector('#dark'),
     pmBtn = document.querySelector('#pm'),
@@ -92,6 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
     secondsArrow.element.style.transform = `rotate(${(seconds*6)+180}deg) translateY(${secondsArrow.translateY}px) scaleY(${secondsArrow.scale})`;
     minutesArrow.element.style.transform = `rotate(${(minutes*6)+180}deg) translateY(${minutesArrow.translateY}px) scaleY(${minutesArrow.scale}) scaleX(${minutesArrow.scaleX})`;
     hoursArrow.element.style.transform = `rotate(${(hours*30)+180}deg) translateY(${hoursArrow.translateY}px) scaleY(${hoursArrow.scale}) scaleX(${hoursArrow.scaleX})`;
+
   }
 
   function getTime() {
@@ -197,6 +199,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('dark');
     themeBtn.classList.toggle('on');
     amPmElem.classList.toggle('dark');
+    digitalWrapper.classList.toggle('dark');
     digitalClock.classList.toggle('dark');
     cards.forEach(card => {
       card.classList.toggle('dark');
